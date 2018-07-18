@@ -6,8 +6,6 @@
 import csv
 import os
 import sys
-# p=os.path.split(os.getcwd())
-# os.chdir(p[0]+'\\'+ 'input')
 infile = sys.argv[1]
 outfile = sys.argv[2]
 reader = csv.reader(open(infile, 'r'), delimiter=',')
@@ -78,8 +76,6 @@ header = ["drug_name", "num_prescriber", "total_cost"]
 top_cost_drug.insert(0,header)
 
 #writing to text file
-# p=os.path.split(os.getcwd())
-# os.chdir(p[0]+'\\'+ 'output')
 with open(outfile, "w") as output:
     csv_writer = csv.writer(output)
     csv_writer.writerows(top_cost_drug)
