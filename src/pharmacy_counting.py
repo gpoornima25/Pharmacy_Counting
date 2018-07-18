@@ -68,7 +68,7 @@ for j in range(num_drugs):
     #num_prescriber
     top_cost_drug[j][1] = num_prescriber[j]
     #total_cost
-    top_cost_drug[j][2] = total_cost[j]
+    top_cost_drug[j][2] = int(total_cost[j])
 
 #sorting based on top cost
 top_cost_drug.sort(key=lambda row: row[2], reverse=True)
